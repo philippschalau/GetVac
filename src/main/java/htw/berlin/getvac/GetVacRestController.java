@@ -8,7 +8,10 @@ public class GetVacRestController {
 
     @RequestMapping("/")
     public String index() {
+
         return "Hello World!";
     }
+
+
 
 }
