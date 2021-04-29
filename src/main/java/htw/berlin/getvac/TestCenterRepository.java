@@ -1,8 +1,8 @@
-package htw.berlin.getvac.classes;
+package htw.berlin.getvac;
 
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface testCenterRepository extends CrudRepository<testCenter, Long> {
+public interface TestCenterRepository extends CrudRepository<TestCenter, Long> {
 }
