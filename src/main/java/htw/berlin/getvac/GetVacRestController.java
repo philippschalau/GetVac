@@ -13,10 +13,16 @@ public class GetVacRestController {
     Environment env;
     //private TestCenter testCenter;
 
+//    @GetMapping("/")
+//    public String index() {
+//
+//        return env.getProperty("JDBC_DATABASE_URL");
+//    }
+
     @GetMapping("/")
     public String index() {
 
-        return env.getProperty("JDBC_DATABASE_URL");
+        return "Hello World!";
     }
 
 
