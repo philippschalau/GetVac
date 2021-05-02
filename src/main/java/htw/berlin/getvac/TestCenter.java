@@ -14,8 +14,7 @@ public class TestCenter {
     private Long id;
     private String name;
     private String address;
-    private int zipcode;
-    private String city;
+
 
     public TestCenter() {
     }
@@ -23,8 +22,6 @@ public class TestCenter {
     public TestCenter(String name, String address, int zipcode, String city) {
         this.name = name;
         this.address = address;
-        this.zipcode = zipcode;
-        this.city = city;
     }
 
 
@@ -52,21 +49,7 @@ public class TestCenter {
         this.address = address;
     }
 
-    public int getZipcode() {
-        return zipcode;
-    }
 
-    public void setZipcode(int zipcode) {
-        this.zipcode = zipcode;
-    }
-
-    public String getCity() {
-        return city;
-    }
-
-    public void setCity(String city) {
-        this.city = city;
-    }
 
 
 }
