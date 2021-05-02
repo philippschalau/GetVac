@@ -10,9 +10,10 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-public class GetVacRestController<json> {
+public class GetVacRestController {
 
-private final TestCenterRepository testCenterRepository;
+    @Autowired
+    TestCenterRepository testCenterRepository;
 
 GetVacRestController(TestCenterRepository testCenterRepository){
     this.testCenterRepository = testCenterRepository;
@@ -33,7 +34,6 @@ GetVacRestController(TestCenterRepository testCenterRepository){
     TestCenter newTestCenter(@RequestBody TestCenter newTestCenter){
     return testCenterRepository.save(newTestCenter);
     }
-
 
 
 
