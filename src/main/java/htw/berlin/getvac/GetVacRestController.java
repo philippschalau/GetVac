@@ -10,9 +10,9 @@ import java.util.List;
 public class GetVacRestController {
 
     @Autowired
-    TestCenterRepository testCenterRepository;
+    VacCenterRepository testCenterRepository;
 
-GetVacRestController(TestCenterRepository testCenterRepository){
+    GetVacRestController(VacCenterRepository testCenterRepository){
     this.testCenterRepository = testCenterRepository;
 }
 
@@ -23,14 +23,29 @@ GetVacRestController(TestCenterRepository testCenterRepository){
     }
 
     @GetMapping("/centers")
-    List<TestCenter> all(){
+    List<VacCenter> all(){
     return testCenterRepository.findAll();
     }
 
     @PostMapping("/centers")
-    TestCenter newTestCenter(@RequestBody TestCenter newTestCenter){
+    VacCenter newTestCenter(@RequestBody VacCenter newTestCenter){
     return testCenterRepository.save(newTestCenter);
     }
+
+    @DeleteMapping("{id}")
+    public String deletePerson(@PathVariable("id") Long id) {
+
+        if(id > 0) {
+            if(testCenterRepository.delete(id)) {
+                return "Deleted the center.";
+            } else {
+                return "Cannot delete the center.";
+            }
+        }
+        return "The id is invalid for the center.";
+    }
+
+
 
 
 

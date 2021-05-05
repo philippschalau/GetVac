@@ -4,5 +4,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface TestCenterRepository extends JpaRepository<TestCenter, Long> {
+public interface VacCenterRepository extends JpaRepository<VacCenter, Long> {
 }

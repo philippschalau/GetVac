@@ -1,13 +1,10 @@
 package htw.berlin.getvac;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 
 @Entity
-public class TestCenter {
+public class VacCenter {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -16,12 +13,29 @@ public class TestCenter {
     private String address;
 
 
-    public TestCenter() {
+    public VacCenter() {
     }
 
-    public TestCenter(String name, String address, int zipcode, String city) {
+    public VacCenter(Long id, String name, String address) {
+        this.id = id;
         this.name = name;
         this.address = address;
+    }
+
+
+
+    @Override
+    public String toString() {
+
+        StringBuilder builder = new StringBuilder();
+
+        builder.append(String.valueOf(id));
+        builder.append(", ");
+        builder.append(name);
+        builder.append(", ");
+        builder.append(address);
+
+        return builder.toString();
     }
 
 
