@@ -20,7 +20,7 @@ public class GetVacRestController {
     @GetMapping("/")
     public String index() {
 
-        return "Hello World!";
+        return "Welcome to GetVac!";
     }
 
     @GetMapping("/centers")
