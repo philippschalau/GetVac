@@ -2,11 +2,13 @@ package htw.berlin.getvac;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@RestController
+@Controller
 public class GetVacRestController {
 
     @Autowired
@@ -18,9 +20,9 @@ public class GetVacRestController {
     }
 
     @GetMapping("/")
-    public String index() {
-
-        return "Welcome to GetVac!";
+     String getCenters(Model model) {
+        model.addAttribute("listOfCenters", vacCenterRepository.findAll());
+        return "landing";
     }
 
     @GetMapping("/centers")
@@ -37,6 +39,7 @@ public class GetVacRestController {
 
     @DeleteMapping("/centers/{id}")
     public void delete(@PathVariable Long id){
+
         vacCenterRepository.deleteById(id);
     }
 
