@@ -21,7 +21,10 @@ public class GetVacRestController {
 
     @GetMapping("/")
      String getCenters(Model model) {
+
         model.addAttribute("listOfCenters", vacCenterRepository.findAll());
+
+
         return "landing";
     }
 
