@@ -24,7 +24,6 @@ public class GetVacRestController {
 
         model.addAttribute("listOfCenters", vacCenterRepository.findAll());
 
-
         return "landing";
     }
 

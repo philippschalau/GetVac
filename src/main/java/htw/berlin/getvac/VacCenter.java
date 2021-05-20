@@ -10,34 +10,40 @@ public class VacCenter {
     //@GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
-    private String address;
+    private String street;
+    private Long zip;
+    private String city;
     private String phone;
 
 
     public VacCenter() {
     }
 
-    public VacCenter(Long id, String name, String address, String phone) {
+    public VacCenter(Long id, String name, String street, Long zip, String city, String phone) {
         this.id = id;
         this.name = name;
-        this.address = address;
+        this.street = street;
+        this.zip = zip;
+        this.city = city;
         this.phone = phone;
     }
-
-
 
     @Override
     public String toString() {
 
         StringBuilder builder = new StringBuilder();
 
-        builder.append(String.valueOf(id));
-        builder.append(", ");
+
         builder.append(name);
-        builder.append(", ");
-        builder.append(address);
-        builder.append(", ");
+        builder.append("\n");
+        builder.append(street);
+        builder.append("\n");
+        builder.append(zip);
+        builder.append("\n");
+        builder.append(city);
+        builder.append("\n");
         builder.append(phone);
+
 
         return builder.toString();
     }
@@ -59,20 +65,36 @@ public class VacCenter {
         this.name = name;
     }
 
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
     public String getPhone() {
         return phone;
     }
 
     public void setPhone(String phone) {
         this.phone = phone;
+    }
+
+    public String getStreet() {
+        return street;
+    }
+
+    public void setStreet(String street) {
+        this.street = street;
+    }
+
+    public Long getZip() {
+        return zip;
+    }
+
+    public void setZip(Long zip) {
+        this.zip = zip;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
     }
 }
 
