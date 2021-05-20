@@ -1,3 +1,4 @@
+/*
 package htw.berlin.getvac;
 
 import org.junit.jupiter.api.Test;
@@ -11,3 +12,4 @@ class GetVacApplicationTests {
     }
 
 }
+*/
