@@ -8,24 +8,12 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@Controller
+@RestController
 public class GetVacRestController {
 
     @Autowired
     private VacCenterRepository vacCenterRepository;
 
-    GetVacRestController(VacCenterRepository vacCenterRepository) {
-
-        this.vacCenterRepository = vacCenterRepository;
-    }
-
-    @GetMapping("/")
-     String getCenters(Model model) {
-
-        model.addAttribute("listOfCenters", vacCenterRepository.findAll());
-
-        return "landing";
-    }
 
     @GetMapping("/centers")
     List<VacCenter> all() {

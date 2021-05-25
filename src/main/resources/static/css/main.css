@@ -16,15 +16,22 @@ body {
 }
 
 h1 {
-    font-size: 46px;
+    font-size: 50px;
     margin-top: 10px;
     margin-bottom: 10px;
+    font-family: Verdana;
 }
 
 h2 {
-    font-size: 34px;
+    font-size: 50px;
     margin-top: 10px;
     margin-bottom: 10px;
+    font-family: Verdana;
 }
 
-
+p {
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: Verdana;
+}
