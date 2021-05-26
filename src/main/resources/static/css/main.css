@@ -2,7 +2,7 @@ body {
     background: #43cea2;
     background: -webkit-linear-gradient(to right, #185a9d, #43cea2);
     background: linear-gradient(to right, #185a9d, #43cea2);
-    color: #fff;
+    color: white;
     text-align: center;
 }
 
@@ -34,6 +34,7 @@ p {
     margin-top: 10px;
     margin-bottom: 10px;
     font-family: Verdana;
+
 }
 
 div.boxes {
@@ -43,6 +44,7 @@ div.boxes {
     background-color: lightgray;
     border-radius: 25px;
     display: inline-block;
+    color: black;
 }
 
 
