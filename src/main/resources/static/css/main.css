@@ -22,12 +22,7 @@ h1 {
     font-family: Verdana;
 }
 
-h2 {
-    font-size: 50px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    font-family: Verdana;
-}
+
 
 p {
     font-size: 20px;
@@ -37,13 +32,35 @@ p {
 }
 
 div.boxes {
-    width: 30%;
+    width: 15%;
     padding: 10px;
     margin: 20px;
+    color: black;
     background-color: lightgray;
     border-radius: 25px;
-    display: inline-block;
+    display: block;
+    float: left;
 }
+
+div.boxesright {
+    width: 15%;
+    padding: 10px;
+    margin: 20px;
+    color: black;
+    background-color: lightgray;
+    border-radius: 25px;
+    display: block;
+    float: right;
+
+}
+
+div.map {
+    padding: 10px;
+    margin: 20px;
+    border-radius: 25px;
+    display: block;
+}
+
 
 
 
