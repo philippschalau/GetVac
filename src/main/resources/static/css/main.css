@@ -25,7 +25,7 @@ h1 {
 
 
 p {
-    font-size: 15px;
+    font-size: 20px;
     margin-top: 10px;
     margin-bottom: 10px;
     font-family: Verdana;
@@ -39,14 +39,10 @@ div.boxes {
     color: black;
     background-color: lightgray;
     border-radius: 25px;
-<<<<<<< HEAD
     display: block;
     float: left;
-=======
-    display: inline-block;
-    color: black;
 
->>>>>>> 4580b96f09bc63090f4aba5e2debce78e82d37f0
+
 }
 
 div.boxesright {

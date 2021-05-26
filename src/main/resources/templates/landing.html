@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>getVac</title>
-    <link rel="stylesheet" href="/css/main.css"/>
+    <link rel="stylesheet" href="/css/main.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="icon" href="/bilder/Logo.png">
@@ -11,8 +11,8 @@
 
 <body>
 
-<div class="w3-bar w3-border w3-light-grey">
-    <img src="/bilder/Logo.png" width="50" height="50" alt="Selfhtml">
+<div class="w3-bar w3-border w3-light-grey" >
+    <img src="/bilder/Logo.png" width="50" height="50"   alt="Selfhtml">
     <font face="Verdana" size="5" style="color:#43cea2"><b>getVac</b></font>
 
 </div>
@@ -20,111 +20,44 @@
 <h1> Hier entsteht bald eine schöne Seite! :) </h1>
 
 
+
 <div class="boxes">
     <p th:text="${listOfCenters[0].getName()}"/>
     <p th:text="${listOfCenters[0].getStreet()}"/>
     <p th:text="${listOfCenters[0].getZip() + ' ' + listOfCenters[0].getCity()}"/>
-<<<<<<< HEAD
     <button type="button" class="btn btn-secondary">Termin buchen</button>
     <p th:text="${listOfCenters[1].getName()}"/>
     <p th:text="${listOfCenters[1].getStreet()}"/>
     <p th:text="${listOfCenters[1].getZip() + ' ' + listOfCenters[1].getCity()}"/>
     <button type="button" class="btn btn-secondary">Termin buchen</button>
-=======
-    <p th:text="${listOfCenters[0].getPhone()}"/>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1717.5799376855846!2d13.453157323998546!3d52.49678989466457!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a84e55b04a4c0b%3A0x6852fd9350063186!2sArena%20Berlin!5e0!3m2!1sde!2sde!4v1621969295494!5m2!1sde!2sde"
-            width="380" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-    <div>
-        <button type="button" class="btn btn-sm btn-outline-secondary">Termin Buchen</button>
-    </div>
-
-</div>
-
-<div class="boxes">
-    <p th:text="${listOfCenters[1].getName()}"/>
-    <p th:text="${listOfCenters[1].getStreet()}"/>
-    <p th:text="${listOfCenters[1].getZip() + ' ' + listOfCenters[1].getCity()}"/>
-    <p th:text="${listOfCenters[1].getPhone()}"/>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2426.792189438449!2d13.367428716132423!3d52.537193979817424!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a8516968c04057%3A0x759b414ae8c704fc!2sImpfzentrum%20Berlin%20-%20Erika-He%C3%9F-Eisstadion!5e0!3m2!1sde!2sde!4v1621969340441!5m2!1sde!2sde"
-            width="380" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-    <div>
-        <button type="button" class="btn btn-sm btn-outline-secondary">Termin Buchen</button>
-    </div>
-</div>
-
-<div class="boxes">
->>>>>>> 4580b96f09bc63090f4aba5e2debce78e82d37f0
     <p th:text="${listOfCenters[2].getName()}"/>
     <p th:text="${listOfCenters[2].getStreet()}"/>
     <p th:text="${listOfCenters[2].getZip() + ' ' + listOfCenters[2].getCity()}"/>
     <button type="button" class="btn btn-secondary">Secondary</button>
 
-<<<<<<< HEAD
-=======
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2425.691399206828!2d13.289852866133035!3d52.5571068298212!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x27042a6252ee947c!2sImpfzentrum%20Berlin%20Tegel%20Terminal%20C!5e0!3m2!1sde!2sde!4v1621969433272!5m2!1sde!2sde"
-            width="380" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-    <div>
-        <button type="button" class="btn btn-sm btn-outline-secondary">Termin Buchen</button>
-    </div>
->>>>>>> 4580b96f09bc63090f4aba5e2debce78e82d37f0
 </div>
 
 <div class="boxesright">
     <p th:text="${listOfCenters[3].getName()}"/>
     <p th:text="${listOfCenters[3].getStreet()}"/>
     <p th:text="${listOfCenters[3].getZip() + ' ' + listOfCenters[3].getCity()}"/>
-<<<<<<< HEAD
     <button type="button" class="btn btn-secondary">Termin buchen</button>
     <p th:text="${listOfCenters[4].getName()}"/>
     <p th:text="${listOfCenters[4].getStreet()}"/>
     <p th:text="${listOfCenters[4].getZip() + ' ' + listOfCenters[4].getCity()}"/>
     <button type="button" class="btn btn-secondary">Termin buchen</button>
-=======
-    <p th:text="${listOfCenters[3].getPhone()}"/>
-
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2429.946941645542!2d13.392498816130745!3d52.48009637980673!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a84f62dae9d565%3A0xd5b04abca92add1f!2sImpfzentrum%20Flughafen%20Tempelhof!5e0!3m2!1sde!2sde!4v1621969460948!5m2!1sde!2sde"
-            width="380" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-    <div>
-        <button type="button" class="btn btn-sm btn-outline-secondary">Termin Buchen</button>
-    </div>
-</div>
-
-<div class="boxes">
-    <p th:text="${listOfCenters[4].getName()}"/>
-    <p th:text="${listOfCenters[4].getStreet()}"/>
-    <p th:text="${listOfCenters[4].getZip() + ' ' + listOfCenters[4].getCity()}"/>
-    <p th:text="${listOfCenters[4].getPhone()}"/>
-
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2428.4971378396685!2d13.27048761613153!3d52.50634167981158!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a8571f61b570a7%3A0x6db977b39837a08a!2sCorona-Impfzentrum%20Messe%20Berlin!5e0!3m2!1sde!2sde!4v1621969484206!5m2!1sde!2sde"
-            width="380" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-    <div>
-        <button type="button" class="btn btn-sm btn-outline-secondary">Termin Buchen</button>
-    </div>
-</div>
-
-<div class="boxes">
->>>>>>> 4580b96f09bc63090f4aba5e2debce78e82d37f0
     <p th:text="${listOfCenters[5].getName()}"/>
     <p th:text="${listOfCenters[5].getStreet()}"/>
     <p th:text="${listOfCenters[5].getZip() + ' ' + listOfCenters[5].getCity()}"/>
     <button type="button" class="btn btn-secondary">Termin buchen</button>
 </div>
 
-<<<<<<< HEAD
 <div class="map">
     <iframe src="https://www.google.com/maps/d/embed?mid=1nGlBumZY-CJdHI_HshGBGKkqNLZdvWkp&hl=de" width="1200" height="592"></iframe>
 </div>
 
 
-=======
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2427.1613084010764!2d13.448654716132202!3d52.53051557981612!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a84fc3a22029cf%3A0x2e9371eb78584ce8!2sImpfzentrum%20Berlin%20-%20Velodrom!5e0!3m2!1sde!2sde!4v1621969503224!5m2!1sde!2sde"
-            width="380" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
->>>>>>> 4580b96f09bc63090f4aba5e2debce78e82d37f0
 
-    <div>
-        <button type="button" class="btn btn-sm btn-outline-secondary">Termin Buchen</button>
-    </div>
-</div>
 
 
 
