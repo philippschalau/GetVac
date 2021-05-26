@@ -34,26 +34,30 @@ p {
 
 div.boxes {
     width: 15%;
+    height: 710px;
     padding: 10px;
     margin: 20px;
-    color: black;
-    background-color: lightgray;
+    color: white;
     border-radius: 25px;
     display: block;
     float: left;
+    border-style: solid;
+    border-color: white;
 
 
 }
 
 div.boxesright {
     width: 15%;
+    height: 710px;
     padding: 10px;
     margin: 20px;
-    color: black;
-    background-color: lightgray;
+    color: white;
     border-radius: 25px;
     display: block;
     float: right;
+    border-style: solid;
+    border-color: white;
 
 }
 
