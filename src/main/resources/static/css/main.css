@@ -2,7 +2,7 @@ body {
     background: #43cea2;
     background: -webkit-linear-gradient(to right, #185a9d, #43cea2);
     background: linear-gradient(to right, #185a9d, #43cea2);
-    color: #fff;
+    color: white;
     text-align: center;
 }
 
@@ -25,10 +25,11 @@ h1 {
 
 
 p {
-    font-size: 20px;
+    font-size: 15px;
     margin-top: 10px;
     margin-bottom: 10px;
     font-family: Verdana;
+
 }
 
 div.boxes {
@@ -38,8 +39,14 @@ div.boxes {
     color: black;
     background-color: lightgray;
     border-radius: 25px;
+<<<<<<< HEAD
     display: block;
     float: left;
+=======
+    display: inline-block;
+    color: black;
+
+>>>>>>> 4580b96f09bc63090f4aba5e2debce78e82d37f0
 }
 
 div.boxesright {
