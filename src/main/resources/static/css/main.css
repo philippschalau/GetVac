@@ -14,16 +14,14 @@ body {
     top: 35%;
     bottom: 0;
 }
-
-h1 {
-    font-size: 50px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    font-family: Verdana;
+img{
+    margin-left: 250px;
 }
 
+font {
+    margin-left: 5px;
 
-
+}
 p {
     font-size: 20px;
     margin-top: 10px;
