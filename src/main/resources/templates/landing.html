@@ -12,7 +12,7 @@
 <body>
 
 <div class="w3-bar w3-border w3-light-grey">
-    <img src="/bilder/Logo.png" width="50" height="50" alt="Selfhtml">
+    <a href="/"><img src="/bilder/Logo.png" width="50" height="50" alt="Selfhtml"></a>
     <font face="Verdana" size="5" style="color:#43cea2"><b>getVac</b></font>
 
     <button type="button" class="login">Login</button>
@@ -26,36 +26,46 @@
     <p th:text="${listOfCenters[0].getName()}"/>
     <p th:text="${listOfCenters[0].getStreet()}"/>
     <p th:text="${listOfCenters[0].getZip() + ' ' + listOfCenters[0].getCity()}"/>
-    <button type="button" class="btn btn-primary">Termin buchen</button>
+    <form action="/arenaBooking">
+        <input type="submit" value="Termin buchen">
+    </form>
     <p>__________________</p>
     <p th:text="${listOfCenters[1].getName()}"/>
     <p th:text="${listOfCenters[1].getStreet()}"/>
     <p th:text="${listOfCenters[1].getZip() + ' ' + listOfCenters[1].getCity()}"/>
-    <button type="button" class="btn btn-primary">Termin buchen</button>
+    <form action="/erikaBooking">
+        <input type="submit" value="Termin buchen">
+    </form>
     <p>__________________</p>
     <p th:text="${listOfCenters[2].getName()}"/>
     <p th:text="${listOfCenters[2].getStreet()}"/>
     <p th:text="${listOfCenters[2].getZip() + ' ' + listOfCenters[2].getCity()}"/>
-    <button type="button" class="btn btn-primary">Termin buchen</button>
-
+    <form action="/tegelBooking">
+        <input type="submit" value="Termin buchen">
+    </form>
 </div>
 
 <div class="boxesright">
     <p th:text="${listOfCenters[3].getName()}"/>
     <p th:text="${listOfCenters[3].getStreet()}"/>
     <p th:text="${listOfCenters[3].getZip() + ' ' + listOfCenters[3].getCity()}"/>
-    <button type="button" class="btn btn-primary">Termin buchen</button>
+    <form action="/tempelhofBooking">
+        <input type="submit" value="Termin buchen">
+    </form>
     <p>__________________</p>
     <p th:text="${listOfCenters[4].getName()}"/>
     <p th:text="${listOfCenters[4].getStreet()}"/>
     <p th:text="${listOfCenters[4].getZip() + ' ' + listOfCenters[4].getCity()}"/>
-    <button type="button" class="btn btn-primary">Termin buchen</button>
+    <form action="/messeBooking">
+        <input type="submit" value="Termin buchen">
+    </form>
     <p>__________________</p>
     <p th:text="${listOfCenters[5].getName()}"/>
     <p th:text="${listOfCenters[5].getStreet()}"/>
     <p th:text="${listOfCenters[5].getZip() + ' ' + listOfCenters[5].getCity()}"/>
-    <button type="button" class="btn btn-primary">Termin buchen</button>
-</div>
+    <form action="/velodromBooking">
+        <input type="submit" value="Termin buchen">
+    </form></div>
 
 <div class="map">
     <iframe src="https://www.google.com/maps/d/embed?mid=1nGlBumZY-CJdHI_HshGBGKkqNLZdvWkp&hl=de" width="1200"
