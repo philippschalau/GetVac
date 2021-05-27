@@ -16,8 +16,6 @@ body {
 }
 
 div.boxes {
-    /*width: 600px;
-    height: 450px;*/
     margin: 20px;
     margin-top: 110px;
     color: white;
@@ -30,6 +28,10 @@ div.boxes {
 
 div.map{
     padding: 15px;
+}
 
-
+div.container{
+    width: 600px;
+    margin-left: 450px;
+    float: right;
 }
