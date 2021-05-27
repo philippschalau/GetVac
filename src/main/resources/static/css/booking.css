@@ -4,6 +4,7 @@ body {
     background: linear-gradient(to right, #185a9d, #43cea2);
     color: white;
     text-align: center;
+
 }
 
 .page-content {
@@ -20,7 +21,7 @@ div.boxes {
     margin-top: 110px;
     color: white;
     border-radius: 25px;
-    display: block;
+    display: inline;
     float: left;
     border-style: solid;
     border-color: white;
@@ -30,8 +31,12 @@ div.map{
     padding: 15px;
 }
 
-div.container{
-    width: 600px;
-    margin-left: 450px;
-    float: right;
+div.my-container{
+    display:flex;
+    justify-content: center;
+    margin-top: 110px;
+    height: 300px;
 }
+
+
+
