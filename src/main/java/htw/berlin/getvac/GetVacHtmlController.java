@@ -12,10 +12,58 @@ public class GetVacHtmlController {
     private VacCenterRepository vacCenterRepository;
 
     @GetMapping("/")
-    String getCenters(Model model) {
+    String landing(Model model) {
 
         model.addAttribute("listOfCenters", vacCenterRepository.findAll());
 
         return "landing";
+    }
+
+    @GetMapping("/arenaBooking")
+    String arena(Model model) {
+
+        model.addAttribute("listOfCenters", vacCenterRepository.findAll());
+
+        return "arena";
+    }
+
+    @GetMapping("/erikaBooking")
+    String erika(Model model) {
+
+        model.addAttribute("listOfCenters", vacCenterRepository.findAll());
+
+        return "erika";
+    }
+
+    @GetMapping("/tegelBooking")
+    String tegel(Model model) {
+
+        model.addAttribute("listOfCenters", vacCenterRepository.findAll());
+
+        return "tegel";
+    }
+
+    @GetMapping("/tempelhofBooking")
+    String tempelhof(Model model) {
+
+        model.addAttribute("listOfCenters", vacCenterRepository.findAll());
+
+        return "tempelhof";
+    }
+
+    @GetMapping("/messeBooking")
+    String messe(Model model) {
+
+        model.addAttribute("listOfCenters", vacCenterRepository.findAll());
+
+        return "messe";
+    }
+
+    @GetMapping("/velodromBooking")
+    String velodrom(Model model) {
+
+        model.addAttribute("listOfCenters", vacCenterRepository.findAll());
+
+        return "velodrom";
     }
 }
