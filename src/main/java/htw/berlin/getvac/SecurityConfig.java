@@ -15,8 +15,22 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http
                 .authorizeRequests()
                 .antMatchers(
-                 HttpMethod.GET
+                 HttpMethod.GET,
+                 Endpoints.LANDING
+                ).permitAll()
+                .antMatchers(
+                        "/css/*",
+                                    "/bilder/*"
+                ).permitAll()
+                .anyRequest().authenticated()
 
-                )
+                .and()
+                .logout().logoutSuccessUrl("/")
+
+                .and()
+                .oauth2Client()
+                .and()
+                .oauth2Login();
+
     }
 }
