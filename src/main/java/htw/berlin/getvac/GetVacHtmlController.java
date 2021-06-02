@@ -11,7 +11,7 @@ public class GetVacHtmlController {
     @Autowired
     private VacCenterRepository vacCenterRepository;
 
-    @GetMapping("/")
+    @GetMapping(path = Endpoints.LANDING)
     String landing(Model model) {
 
         model.addAttribute("listOfCenters", vacCenterRepository.findAll());
@@ -19,7 +19,7 @@ public class GetVacHtmlController {
         return "landing";
     }
 
-    @GetMapping("/arenaBooking")
+    @GetMapping(path = Endpoints.ARENA)
     String arena(Model model) {
 
         model.addAttribute("listOfCenters", vacCenterRepository.findAll());
@@ -27,7 +27,7 @@ public class GetVacHtmlController {
         return "arena";
     }
 
-    @GetMapping("/erikaBooking")
+    @GetMapping(path = Endpoints.ERIKA)
     String erika(Model model) {
 
         model.addAttribute("listOfCenters", vacCenterRepository.findAll());
@@ -35,7 +35,7 @@ public class GetVacHtmlController {
         return "erika";
     }
 
-    @GetMapping("/tegelBooking")
+    @GetMapping(path = Endpoints.TEGEL)
     String tegel(Model model) {
 
         model.addAttribute("listOfCenters", vacCenterRepository.findAll());
@@ -43,7 +43,7 @@ public class GetVacHtmlController {
         return "tegel";
     }
 
-    @GetMapping("/tempelhofBooking")
+    @GetMapping(path = Endpoints.TEMPELHOF)
     String tempelhof(Model model) {
 
         model.addAttribute("listOfCenters", vacCenterRepository.findAll());
@@ -51,7 +51,7 @@ public class GetVacHtmlController {
         return "tempelhof";
     }
 
-    @GetMapping("/messeBooking")
+    @GetMapping(path = Endpoints.MESSE)
     String messe(Model model) {
 
         model.addAttribute("listOfCenters", vacCenterRepository.findAll());
@@ -59,7 +59,7 @@ public class GetVacHtmlController {
         return "messe";
     }
 
-    @GetMapping("/velodromBooking")
+    @GetMapping(path = Endpoints.VELODROM)
     String velodrom(Model model) {
 
         model.addAttribute("listOfCenters", vacCenterRepository.findAll());
