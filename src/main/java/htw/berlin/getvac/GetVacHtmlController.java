@@ -20,49 +20,37 @@ public class GetVacHtmlController {
     }
 
     @GetMapping(path = Endpoints.ARENA)
-    String arena(Model model) {
-
-        model.addAttribute("listOfCenters", vacCenterRepository.findAll());
+    String arena() {
 
         return "arena";
     }
 
     @GetMapping(path = Endpoints.ERIKA)
-    String erika(Model model) {
-
-        model.addAttribute("listOfCenters", vacCenterRepository.findAll());
+    String erika() {
 
         return "erika";
     }
 
     @GetMapping(path = Endpoints.TEGEL)
-    String tegel(Model model) {
-
-        model.addAttribute("listOfCenters", vacCenterRepository.findAll());
+    String tegel() {
 
         return "tegel";
     }
 
     @GetMapping(path = Endpoints.TEMPELHOF)
-    String tempelhof(Model model) {
-
-        model.addAttribute("listOfCenters", vacCenterRepository.findAll());
+    String tempelhof() {
 
         return "tempelhof";
     }
 
     @GetMapping(path = Endpoints.MESSE)
-    String messe(Model model) {
-
-        model.addAttribute("listOfCenters", vacCenterRepository.findAll());
+    String messe() {
 
         return "messe";
     }
 
     @GetMapping(path = Endpoints.VELODROM)
-    String velodrom(Model model) {
-
-        model.addAttribute("listOfCenters", vacCenterRepository.findAll());
+    String velodrom() {
 
         return "velodrom";
     }
