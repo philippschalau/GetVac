@@ -67,11 +67,6 @@ div.map {
     display: block;
 }
 
-.btn-primary {
-    color: black;
-    background-color: #fff;
-    border-color: #fff;
-}
 
 .login{
     padding: 7px 15px;
@@ -80,24 +75,18 @@ div.map {
     border: none;
     border-radius: 25px;
     text-align: center;
-    float: right;
-    margin-right: 40px;
-    margin-top: 7px;
-    margin-bottom: 7px;
 }
 
-.signup{
+.loginLogout{
     padding: 7px 15px;
-    background-color: #43cea2;
-    color: white;
-    border: none;
-    border-radius: 25px;
-    text-align: center;
     float: right;
     margin-right: 40px;
     margin-top: 7px;
-    margin-bottom: 7px;
+    margin-bottom:7px;
 }
+
+
+
 
 
 
