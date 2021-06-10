@@ -16,14 +16,14 @@ import java.net.URI;
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
 
-//    @Autowired
-//    ClientRegistrationRepository clientRegistrationRepository;
-//
-//    OidcClientInitiatedLogoutSuccessHandler oidcLogoutSuccessHandler() {
-//        OidcClientInitiatedLogoutSuccessHandler successHandler = new OidcClientInitiatedLogoutSuccessHandler(clientRegistrationRepository);
-//        successHandler.setPostLogoutRedirectUri(URI.create("http://localhost:8080/"));
-//        return successHandler;
-//    }
+    @Autowired
+    ClientRegistrationRepository clientRegistrationRepository;
+
+    OidcClientInitiatedLogoutSuccessHandler oidcLogoutSuccessHandler() {
+        OidcClientInitiatedLogoutSuccessHandler successHandler = new OidcClientInitiatedLogoutSuccessHandler(clientRegistrationRepository);
+        successHandler.setPostLogoutRedirectUri(URI.create("https://getvac.herokuapp.com/"));
+        return successHandler;
+    }
 
 
     @Override
@@ -42,7 +42,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
                 .and().logout().logoutSuccessUrl("/")
 
-//                .and().logout().logoutSuccessHandler(oidcLogoutSuccessHandler())
+                .and().logout().logoutSuccessHandler(oidcLogoutSuccessHandler())
 
 
                 .and()
