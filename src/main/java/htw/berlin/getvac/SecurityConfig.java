@@ -21,7 +21,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     OidcClientInitiatedLogoutSuccessHandler oidcLogoutSuccessHandler() {
         OidcClientInitiatedLogoutSuccessHandler successHandler = new OidcClientInitiatedLogoutSuccessHandler(clientRegistrationRepository);
-        successHandler.setPostLogoutRedirectUri(URI.create("https://getvac.herokuapp.com/"));
+        successHandler.setPostLogoutRedirectUri(URI.create("http://localhost:8080/"));
         return successHandler;
     }
 
@@ -40,7 +40,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 ).permitAll()
                 .anyRequest().authenticated()
 
-                .and().logout().logoutSuccessUrl("/")
 
                 .and().logout().logoutSuccessHandler(oidcLogoutSuccessHandler())
 
