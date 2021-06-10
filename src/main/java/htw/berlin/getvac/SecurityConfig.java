@@ -40,9 +40,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 ).permitAll()
                 .anyRequest().authenticated()
 
+                .and().logout().logoutSuccessUrl("/")
+
                 .and().logout().logoutSuccessHandler(oidcLogoutSuccessHandler())
 
-                .and().logout().logoutSuccessUrl("/")
 
                 .and()
                 .oauth2Client()
