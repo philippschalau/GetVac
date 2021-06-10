@@ -36,14 +36,13 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 ).permitAll()
                 .antMatchers(
                         "/css/*",
-                                    "/bilder/*"
+                        "/bilder/*"
                 ).permitAll()
                 .anyRequest().authenticated()
 
-
                 .and().logout().logoutSuccessHandler(oidcLogoutSuccessHandler())
 
-//                .and().logout().logoutSuccessUrl("/")
+                .and().logout().logoutSuccessUrl("/")
 
                 .and()
                 .oauth2Client()
