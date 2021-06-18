@@ -66,6 +66,10 @@
                     </div>
                 </div>
             </div>
+            <div id="location">
+            <label class="control-label">Impfzentrum</label>
+            <p th:text="${listOfCenters[0].getName()}"/>
+            </div>
         </div>
         <input type="submit" class="btn btn-primary" value="Buchen">
     </div>
@@ -77,6 +81,9 @@
             locale: 'de',
             sideBySide: true,
             format: 'DD.MM.YYYY HH:mm',
+            daysOfWeekDisabled:[0, 6],
+            enabledHours: [8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19],
+            stepping: 30,
         });
     });
 </script>
