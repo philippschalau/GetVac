@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="icon" href="/bilder/Logo.png">
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/momentjs/2.14.1/moment.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
@@ -15,120 +14,113 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/js/bootstrap-datetimepicker.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/css/bootstrap-datetimepicker.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
 </head>
 
 <body>
-
 <div class="w3-bar w3-border w3-light-grey">
     <a href="/"><img src="/bilder/Logo.png" width="50" height="50" alt="Selfhtml"></a>
     <font face="Verdana" size="5" style="color:#43cea2"><b>getVac</b></font>
-
     <div class="loginLogout" sec:authorize="!isAuthenticated()">
         <a class="login" th:href="@{/oauth2/authorization/okta}" th:classappend="${#request.requestURI == '/login' ? 'active':''}">Login</a>
     </div>
     <div class="loginLogout" sec:authorize="isAuthenticated()">
-        <form id="logout-form" method="POST" action="#" th:action="@{/logout}">
+        <form id="logout-form" method="POST" action="#" th:action="@{/logout}" >
             <button type="submit" class="login">Logout</button>
         </form>
     </div>
 </div>
 
+
+
 <div id="pageone">
-<div>
+    <div>
 
-    <button type="submit" class="buchen">Jetzt Termin Buchen</button>
+        <button type="submit" class="buchen">Jetzt Termin Buchen</button>
 
+    </div>
+
+
+    <div class="boxes">
+        <p th:text="${listOfCenters[0].getName()}"/>
+        <p th:text="${listOfCenters[0].getStreet()}"/>
+        <p th:text="${listOfCenters[0].getZip() + ' ' + listOfCenters[0].getCity()}"/>
+
+        <p>_______________________</p>
+        <p th:text="${listOfCenters[1].getName()}"/>
+        <p th:text="${listOfCenters[1].getStreet()}"/>
+        <p th:text="${listOfCenters[1].getZip() + ' ' + listOfCenters[1].getCity()}"/>
+
+        <p>_______________________</p>
+        <p th:text="${listOfCenters[2].getName()}"/>
+        <p th:text="${listOfCenters[2].getStreet()}"/>
+        <p th:text="${listOfCenters[2].getZip() + ' ' + listOfCenters[2].getCity()}"/>
+
+    </div>
+
+    <div class="boxesright">
+        <p th:text="${listOfCenters[3].getName()}"/>
+        <p th:text="${listOfCenters[3].getStreet()}"/>
+        <p th:text="${listOfCenters[3].getZip() + ' ' + listOfCenters[3].getCity()}"/>
+
+        <p>_______________________</p>
+        <p th:text="${listOfCenters[4].getName()}"/>
+        <p th:text="${listOfCenters[4].getStreet()}"/>
+        <p th:text="${listOfCenters[4].getZip() + ' ' + listOfCenters[4].getCity()}"/>
+
+        <p>_______________________</p>
+        <p th:text="${listOfCenters[5].getName()}"/>
+        <p th:text="${listOfCenters[5].getStreet()}"/>
+        <p th:text="${listOfCenters[5].getZip() + ' ' + listOfCenters[5].getCity()}"/>
+
+    </div>
+    <div class="map">
+        <iframe src="https://www.google.com/maps/d/embed?mid=1nGlBumZY-CJdHI_HshGBGKkqNLZdvWkp&hl=de" width="1000"
+                height="500" style="border:0;"></iframe>
+    </div>
 </div>
 
-
-<div class="boxes">
-    <p th:text="${listOfCenters[0].getName()}"/>
-    <p th:text="${listOfCenters[0].getStreet()}"/>
-    <p th:text="${listOfCenters[0].getZip() + ' ' + listOfCenters[0].getCity()}"/>
-
-    <p>_______________________</p>
-    <p th:text="${listOfCenters[1].getName()}"/>
-    <p th:text="${listOfCenters[1].getStreet()}"/>
-    <p th:text="${listOfCenters[1].getZip() + ' ' + listOfCenters[1].getCity()}"/>
-
-    <p>_______________________</p>
-    <p th:text="${listOfCenters[2].getName()}"/>
-    <p th:text="${listOfCenters[2].getStreet()}"/>
-    <p th:text="${listOfCenters[2].getZip() + ' ' + listOfCenters[2].getCity()}"/>
-
-</div>
-
-<div class="boxesright">
-    <p th:text="${listOfCenters[3].getName()}"/>
-    <p th:text="${listOfCenters[3].getStreet()}"/>
-    <p th:text="${listOfCenters[3].getZip() + ' ' + listOfCenters[3].getCity()}"/>
-
-    <p>_______________________</p>
-    <p th:text="${listOfCenters[4].getName()}"/>
-    <p th:text="${listOfCenters[4].getStreet()}"/>
-    <p th:text="${listOfCenters[4].getZip() + ' ' + listOfCenters[4].getCity()}"/>
-
-    <p>_______________________</p>
-    <p th:text="${listOfCenters[5].getName()}"/>
-    <p th:text="${listOfCenters[5].getStreet()}"/>
-    <p th:text="${listOfCenters[5].getZip() + ' ' + listOfCenters[5].getCity()}"/>
-
-</div>
-<div class="map">
-    <iframe src="https://www.google.com/maps/d/embed?mid=1nGlBumZY-CJdHI_HshGBGKkqNLZdvWkp&hl=de" width="1000"
-            height="500" style="border:0;"></iframe>
-</div>
-</div>
-
-
-<div id="pagetwo">
-    <div class="my-container">
-        <div class="panel panel-primary">
-            <div class="panel-heading">Termin auswählen</div>
-            <div class="panel-body">
-                <div class="headline">
-                    <p>Für wen möchten Sie den Termin buchen?</p>
-                </div>
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label class="control-label">Vorname</label>
-                            <input type="text" class="form-control" name="fname" id="fname">
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label class="control-label">Nachname</label>
-                            <input type="text" class="form-control" name="lname" id="lname">
-                        </div>
-                    </div>
-                </div>
-                <div class='my-col-md-6'>
+<div class="my-container">
+    <div class="panel panel-primary">
+        <div class="panel-heading">Termin auswählen</div>
+        <div class="panel-body">
+            <div class="headline">
+                <p>Für wen möchten Sie den Termin buchen?</p>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
                     <div class="form-group">
-                        <label class="control-label">Datum/ Uhrzeit</label>
-                        <div class='input-group date' id='datetimepicker1'>
-                            <input type='text' class="form-control" />
-                            <span class="input-group-addon">
-                     <span class="glyphicon glyphicon-calendar"></span>
-                     </span>
-                        </div>
+                        <label class="control-label">Vorname</label>
+                        <input type="text" class="form-control" name="fname" id="fname">
                     </div>
                 </div>
-                <div class="dropdown">
-                    <label for="impfzentrum">Impfzentrum auswählen:</label>
-                    <select name="impfzentrum" id="impfzentrum">
-                        <option value="arena">Impfzentrum Arena Berlin</option>
-                        <option value="erika">Impfzentrum Erika-Heß-Eisstadion</option>
-                        <option value="tegel">Impfzentrum Flughafen Tegel</option>
-                        <option value="tempelhof">Impfzentrum Flughafen Tempelhof</option>
-                        <option value="messe">Impfzentrum Messe Berlin</option>
-                        <option value="velodrom">Impfzentrum Velodrom</option>
-                    </select>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="control-label">Nachname</label>
+                        <input type="text" class="form-control" name="lname" id="lname">
+                    </div>
                 </div>
             </div>
-            <input type="submit" class="btn btn-primary" value="Buchen">
+            <div class='my-col-md-6'>
+                <div class="form-group">
+                    <label class="control-label">Datum/ Uhrzeit</label>
+                    <div class='input-group date' id='datetimepicker1'>
+                        <input type='text' class="form-control" />
+                        <span class="input-group-addon">
+                     <span class="glyphicon glyphicon-calendar"></span>
+                     </span>
+                    </div>
+                </div>
+            </div>
+            <div id="location">
+                <label class="control-label">Impfzentrum</label>
+                <p th:text="${listOfCenters[0].getName()}"/>
+            </div>
         </div>
+        <input type="submit" class="btn btn-primary" value="Buchen">
     </div>
+</div>
+</div>
 <script type="text/javascript">
     $(function () {
         $('#datetimepicker1').datetimepicker({
@@ -141,9 +133,6 @@
         });
     });
 </script>
-</div>
-
-
 
 </body>
 </html>

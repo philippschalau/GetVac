@@ -4,7 +4,7 @@
 //! author: Menelion Elensúle: https://github.com/Oire
 //! author : Mikolaj Dadela : https://github.com/mik01aj
 
-;(function (global, factory) {
+(function (global, factory) {
     typeof exports === 'object' && typeof module !== 'undefined'
     && typeof require === 'function' ? factory(require('../moment')) :
         typeof define === 'function' && define.amd ? define(['../moment'], factory) :

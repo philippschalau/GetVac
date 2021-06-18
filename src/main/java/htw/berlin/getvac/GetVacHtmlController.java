@@ -12,8 +12,6 @@ public class GetVacHtmlController {
     private VacCenterRepository vacCenterRepository;
 
 
-
-
     @GetMapping(path = Endpoints.LANDING)
     String landing(Model model) {
 
