@@ -27,7 +27,7 @@
         <a class="login" th:href="@{/oauth2/authorization/okta}" th:classappend="${#request.requestURI == '/login' ? 'active':''}">Login</a>
     </div>
     <div class="loginLogout" sec:authorize="isAuthenticated()">
-        <form id="logout-form" method="POST" action="#" th:action="@{/logout}" >
+        <form id="logout-form" method="POST" action="#" th:action="@{/logout}">
             <button type="submit" class="login">Logout</button>
         </form>
     </div>
