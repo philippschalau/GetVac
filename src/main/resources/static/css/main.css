@@ -30,6 +30,20 @@ p {
 
 }
 
+div.box {
+    width: 20%;
+    height: 500px;
+    padding: 5px;
+    color: black;
+    margin-left: 40%;
+    border-radius: 25px;
+    display: block;
+    border-style: solid;
+    border-color: white;
+    background-color: white;
+    position: center;
+}
+
 div.boxes {
     width: 20%;
     height: 500px;
@@ -67,16 +81,6 @@ div.map {
     display: block;
 }
 
-
-.login{
-    padding: 7px 15px;
-    background-color: #43cea2;
-    color: white;
-    border: none;
-    border-radius: 25px;
-    text-align: center;
-}
-
 .loginLogout{
     padding: 7px 15px;
     float: right;
@@ -99,8 +103,9 @@ div.my-container{
     display:flex;
     justify-content: center;
     margin-top: 110px;
-    height: 370px;
+    height: 400px;
 }
+
 
 
 

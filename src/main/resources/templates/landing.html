@@ -2,16 +2,11 @@
 <html xmlns:th="https://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
-    <title>getVac</title>
+    <title>bestVac</title>
     <link rel="stylesheet" href="/css/main.css"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="icon" href="/bilder/Logo.png">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/momentjs/2.14.1/moment.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <script src="/js/de.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/js/bootstrap-datetimepicker.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/css/bootstrap-datetimepicker.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 
@@ -20,13 +15,13 @@
 <body>
 <div class="w3-bar w3-border w3-light-grey">
     <a href="/"><img src="/bilder/Logo.png" width="50" height="50" alt="Selfhtml"></a>
-    <font face="Verdana" size="5" style="color:#43cea2"><b>getVac</b></font>
+    <font face="Verdana" size="5" style="color:#43cea2"><b>bestVac</b></font>
     <div class="loginLogout" sec:authorize="!isAuthenticated()">
-        <a class="login" th:href="@{/oauth2/authorization/okta}" th:classappend="${#request.requestURI == '/login' ? 'active':''}">Login</a>
+        <a class="btn btn-primary" th:href="@{/oauth2/authorization/okta}" th:classappend="${#request.requestURI == '/login' ? 'active':''}">Login</a>
     </div>
     <div class="loginLogout" sec:authorize="isAuthenticated()">
         <form id="logout-form" method="POST" action="#" th:action="@{/logout}" >
-            <button type="submit" class="login">Logout</button>
+            <button type="submit" class="btn btn-primary">Logout</button>
         </form>
     </div>
 </div>
@@ -35,9 +30,7 @@
 
 <div id="pageone">
     <div>
-
-        <button type="submit" class="buchen">Jetzt Termin Buchen</button>
-
+        <button type="submit" class="buchen">Bewertung abgeben</button>
     </div>
 
 
@@ -80,13 +73,11 @@
     </div>
 </div>
 
+<div id="pagetwo">
 <div class="my-container">
     <div class="panel panel-primary">
-        <div class="panel-heading">Termin auswählen</div>
+        <div class="panel-heading">Bewertung abgeben</div>
         <div class="panel-body">
-            <div class="headline">
-                <p>Für wen möchten Sie den Termin buchen?</p>
-            </div>
             <div class="row">
                 <div class="col-md-6">
                     <div class="form-group">
@@ -102,37 +93,45 @@
                 </div>
             </div>
             <div class='my-col-md-6'>
-                <div class="form-group">
-                    <label class="control-label">Datum/ Uhrzeit</label>
-                    <div class='input-group date' id='datetimepicker1'>
-                        <input type='text' class="form-control" />
-                        <span class="input-group-addon">
-                     <span class="glyphicon glyphicon-calendar"></span>
-                     </span>
-                    </div>
-                </div>
-            </div>
             <div id="location">
-                <label class="control-label">Impfzentrum</label>
-                <p th:text="${listOfCenters[0].getName()}"/>
+                <label for="impfzentrum">Impfzentrum auswählen:</label>
+                <select name="center" id="impfzentrum">
+                    <option value="arena">Impfzentrum Arena</option>
+                    <option value="erika">Impfzentrum Erika-Heß-Eisstadion</option>
+                    <option value="tegel">Impfzentrum Flughafen Tegel</option>
+                    <option value="tempelhof">Impfzentrum Flughafen Tempelhof</option>
+                    <option value="messe">Impfzentrum Messe</option>
+                    <option value="Velodrom">Impfzentrum Velodrom</option>
+                </select>
             </div>
         </div>
-        <input type="submit" class="btn btn-primary" value="Buchen">
+        </div>
+        <div class='my-col-md-6'>
+            <div class="form-group">
+                <label class="control-label">Kommentar:</label>
+                <input height="100" type="text" class="form-control" name="comment" id="comment">
+            </div>
+        </div>
+        <div class='my-col-md-6'>
+            <div id="bewertung">
+                <label for="rating">Note wählen:</label>
+                <select name="rating" id="rating">
+                    <option value="one">1</option>
+                    <option value="two">2</option>
+                    <option value="three">3</option>
+                    <option value="four">4</option>
+                    <option value="five">5</option>
+                    <option value="six">6</option>
+                </select>
+            </div>
+        </div>
+        <input type="submit" class="btn btn-primary" value="Bewertung einreichen">
+
     </div>
 </div>
 </div>
-<script type="text/javascript">
-    $(function () {
-        $('#datetimepicker1').datetimepicker({
-            locale: 'de',
-            sideBySide: true,
-            format: 'DD.MM.YYYY HH:mm',
-            daysOfWeekDisabled:[0, 6],
-            enabledHours: [8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19],
-            stepping: 30,
-        });
-    });
-</script>
+</div>
+
 
 </body>
 </html>
