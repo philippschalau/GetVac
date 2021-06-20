@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>bestVac</title>
+    <link rel="stylesheet" href="/css/main.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="icon" href="/bilder/Logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/css/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://unpkg.com/vue@next"></script>
+
+</head>
+
+<body>
+<div class="w3-bar w3-border w3-light-grey">
+    <a href="/"><img src="/bilder/Logo.png" width="50" height="50" alt="Selfhtml"></a>
+    <font class="headline" face="Verdana" size="5" style="color:#43cea2"><b>bestVac</b></font>
+    <a class="rating" href="/" style="color:#43cea2">Bewertungen ansehen</a>
+    <div class="loginLogout" sec:authorize="!isAuthenticated()">
+        <a class="btn btn-primary" th:href="@{/oauth2/authorization/okta}" th:classappend="${#request.requestURI == '/login' ? 'active':''}">Login</a>
+    </div>
+    <div class="loginLogout" sec:authorize="isAuthenticated()">
+        <form id="logout-form" method="POST" action="#" th:action="@{/logout}" >
+            <button type="submit" class="btn btn-primary">Logout</button>
+        </form>
+    </div>
+</div>
+
+
+
+<div id="pageone">
+
+    <div id="hide">
+        <div class="headbuttons">
+        <button @click="show = !show" type="submit" class="btn btn-primary">Bewertung abgeben</button>
+        </div>
+        <transition name="bounce">
+            <div v-if="show" class="my-container">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">Bewertung abgeben</div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="control-label">Vorname</label>
+                                    <input type="text" class="form-control" name="fname" id="fname">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="control-label">Nachname</label>
+                                    <input type="text" class="form-control" name="lname" id="lname">
+                                </div>
+                            </div>
+                        </div>
+                        <div class='my-col-md-6'>
+                            <label for="impfzentrum">Impfzentrum auswählen: </label>
+                            <div id="location">
+                                <select name="center" id="impfzentrum">
+                                    <option value="arena">Impfzentrum Arena</option>
+                                    <option value="erika">Impfzentrum Erika-Heß-Eisstadion</option>
+                                    <option value="tegel">Impfzentrum Flughafen Tegel</option>
+                                    <option value="tempelhof">Impfzentrum Flughafen Tempelhof</option>
+                                    <option value="messe">Impfzentrum Messe</option>
+                                    <option value="Velodrom">Impfzentrum Velodrom</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='my-col-md-6'>
+                        <label class="control-label">Kommentar: </label>
+                        <div class="form-group">
+                            <textarea rows="4" cols="50">
+                            </textarea>
+                        </div>
+                    </div>
+                    <div class='my-col-md-6'>
+                        <label for="rating">Note wählen: </label>
+                        <div id="bewertung">
+                            <select name="rating" id="rating">
+                                <option value="one">1</option>
+                                <option value="two">2</option>
+                                <option value="three">3</option>
+                                <option value="four">4</option>
+                                <option value="five">5</option>
+                                <option value="six">6</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="einreichen">
+                    <input type="submit" class="btn btn-primary" value="Bewertung einreichen">
+                </div>
+                </div>
+            </div>
+    </div>
+
+        </transition>
+    </div>
+<script>
+    const hide = {
+        data() {
+            return {
+                show: false
+            }
+        }
+    }
+
+    Vue.createApp(hide).mount('#hide')
+</script>
+
+    <div class="boxes">
+        <p th:text="${listOfCenters[0].getName()}"/>
+        <p th:text="${listOfCenters[0].getStreet()}"/>
+        <p th:text="${listOfCenters[0].getZip() + ' ' + listOfCenters[0].getCity()}"/>
+
+        <p>_______________________</p>
+        <p th:text="${listOfCenters[1].getName()}"/>
+        <p th:text="${listOfCenters[1].getStreet()}"/>
+        <p th:text="${listOfCenters[1].getZip() + ' ' + listOfCenters[1].getCity()}"/>
+
+        <p>_______________________</p>
+        <p th:text="${listOfCenters[2].getName()}"/>
+        <p th:text="${listOfCenters[2].getStreet()}"/>
+        <p th:text="${listOfCenters[2].getZip() + ' ' + listOfCenters[2].getCity()}"/>
+
+    </div>
+
+    <div class="boxesright">
+        <p th:text="${listOfCenters[3].getName()}"/>
+        <p th:text="${listOfCenters[3].getStreet()}"/>
+        <p th:text="${listOfCenters[3].getZip() + ' ' + listOfCenters[3].getCity()}"/>
+
+        <p>_______________________</p>
+        <p th:text="${listOfCenters[4].getName()}"/>
+        <p th:text="${listOfCenters[4].getStreet()}"/>
+        <p th:text="${listOfCenters[4].getZip() + ' ' + listOfCenters[4].getCity()}"/>
+
+        <p>_______________________</p>
+        <p th:text="${listOfCenters[5].getName()}"/>
+        <p th:text="${listOfCenters[5].getStreet()}"/>
+        <p th:text="${listOfCenters[5].getZip() + ' ' + listOfCenters[5].getCity()}"/>
+
+    </div>
+    <div class="map">
+        <iframe src="https://www.google.com/maps/d/embed?mid=1nGlBumZY-CJdHI_HshGBGKkqNLZdvWkp&hl=de" width="1000"
+                height="500" style="border:0;"></iframe>
+    </div>
+</div>
+
+
+
+
+
+
+
+</body>
+</html>

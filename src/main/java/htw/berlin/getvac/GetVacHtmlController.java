@@ -13,11 +13,17 @@ public class GetVacHtmlController {
 
 
     @GetMapping(path = Endpoints.LANDING)
+    String landing( ) {
+
+        return "landing";
+    }
+
+    @GetMapping(path = Endpoints.RATING)
     String landing(Model model) {
 
         model.addAttribute("listOfCenters", vacCenterRepository.findAll());
 
-        return "landing";
+        return "rating";
     }
 
 }
