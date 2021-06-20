@@ -15,7 +15,12 @@ body {
     bottom: 0;
 }
 img{
-    margin-left: 250px;
+    float: left;
+}
+
+.headline{
+    float: left;
+    margin-top: 6px;
 }
 
 font {
@@ -84,9 +89,8 @@ div.map {
 .loginLogout{
     padding: 7px 15px;
     float: right;
+    margin-top: 6px;
     margin-right: 40px;
-    margin-top: 7px;
-    margin-bottom:7px;
 }
 
 .buchen{
@@ -106,7 +110,27 @@ div.my-container{
     height: 400px;
 }
 
+.headbuttons{
+    margin-top: 5%;
+}
 
+.bounce-enter-active {
+    animation: bounce-in 0.5s;
+}
+.bounce-leave-active {
+    animation: bounce-in 0.5s reverse;
+}
+@keyframes bounce-in {
+    0% {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(1.25);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
 
 
 
