@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <script src="https://unpkg.com/vue@next"></script>
 
+
 </head>
 
 <body>
@@ -94,21 +95,13 @@
                 </div>
                 </div>
             </div>
-    </div>
-
         </transition>
-    </div>
-<script>
-    const hide = {
-        data() {
-            return {
-                show: false
-            }
-        }
-    }
 
-    Vue.createApp(hide).mount('#hide')
-</script>
+    </div>
+
+    </div>
+<script src="/js/myscripts.js"></script>
+
 
     <div class="boxes">
         <p th:text="${listOfCenters[0].getName()}"/>
