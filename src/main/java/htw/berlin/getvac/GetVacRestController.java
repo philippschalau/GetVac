@@ -21,18 +21,4 @@ public class GetVacRestController {
         return vacCenterRepository.findAll();
     }
 
-    @PostMapping("/centers")
-    VacCenter newTestCenter(@RequestBody VacCenter newVacCenter) {
-
-        return vacCenterRepository.save(newVacCenter);
-    }
-
-    @DeleteMapping("/centers/{id}")
-    public void delete(@PathVariable Long id){
-
-        vacCenterRepository.deleteById(id);
-    }
-
-
-
 }
