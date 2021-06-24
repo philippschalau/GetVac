@@ -10,7 +10,7 @@ public class Rating {
     private Long id;
     private String vaccenter;
     private String comment;
-    private int grade;
+    private Integer grade;
     private String owner;
 
 

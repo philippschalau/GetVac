@@ -10,6 +10,7 @@ public class RatingService {
     private RatingRepository ratingRepository;
 
     public Rating save(Rating rating) {
+
         return ratingRepository.save(rating);
     }
 }

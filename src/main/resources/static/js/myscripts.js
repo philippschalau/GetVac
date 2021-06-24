@@ -1,4 +1,4 @@
-const hide = {
+const app = {
     data() {
         return {
             show: false,
@@ -65,11 +65,12 @@ methods:{
             comment: this.comment,
             grade: this.grade
         })
-            .then(response => {
-                console.log(response)
-            })
-            .catch(error => {
-                console.log(error.response)
+            .then((response) => {
+                this.vaccenter = '';
+                this.comment = '';
+                this.grade = '';
+            }, (error) => {
+                console.log('Rating konnte nicht gespeichert werden');
             });
 
     }
@@ -77,5 +78,5 @@ methods:{
 
 }
 
-Vue.createApp(hide).mount('#hide')
+Vue.createApp(app).mount('#app')
 
