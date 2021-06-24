@@ -45,20 +45,21 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label class="control-label">Vorname</label>
-                                    <input type="text" class="form-control" name="fname" id="fname">
+                                    <input type="text" class="form-control" name="fname" id="fname" required>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label class="control-label">Nachname</label>
-                                    <input type="text" class="form-control" name="lname" id="lname">
+                                    <input type="text" class="form-control" name="lname" id="lname" required>
                                 </div>
                             </div>
                         </div>
                         <div class='my-col-md-6'>
                             <label for="impfzentrum">Impfzentrum auswählen: </label>
                             <div id="location">
-                                <select name="center" id="impfzentrum">
+                                <select name="center" id="impfzentrum" required>
+                                    <option value="" selected disabled hidden>Bitte Impfzentrum auswählen...</option>
                                     <option value="arena">Impfzentrum Arena</option>
                                     <option value="erika">Impfzentrum Erika-Heß-Eisstadion</option>
                                     <option value="tegel">Impfzentrum Flughafen Tegel</option>

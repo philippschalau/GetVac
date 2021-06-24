@@ -12,13 +12,11 @@ import java.util.List;
 public class GetVacRestController {
 
     @Autowired
-    private VacCenterRepository vacCenterRepository;
+    private RatingRepository ratingRepository;
 
 
-    @GetMapping("/centers")
-    List<VacCenter> all() {
 
-        return vacCenterRepository.findAll();
-    }
+
+
 
 }
