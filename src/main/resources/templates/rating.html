@@ -41,20 +41,6 @@
                 <div class="panel panel-primary">
                     <div class="panel-heading">Bewertung abgeben</div>
                     <div class="panel-body">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label class="control-label">Vorname</label>
-                                    <input type="text" class="form-control" name="fname" id="fname" required>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label class="control-label">Nachname</label>
-                                    <input type="text" class="form-control" name="lname" id="lname" required>
-                                </div>
-                            </div>
-                        </div>
                         <div class='my-col-md-6'>
                             <label for="impfzentrum">Impfzentrum auswählen: </label>
                             <div id="location">
@@ -73,14 +59,14 @@
                     <div class='my-col-md-6'>
                         <label class="control-label">Kommentar: </label>
                         <div class="form-group">
-                            <textarea rows="4" cols="50">
-                            </textarea>
+                            <textarea style="resize: none" rows="4" cols="30"></textarea>
                         </div>
                     </div>
                     <div class='my-col-md-6'>
                         <label for="rating">Note wählen: </label>
                         <div id="bewertung">
                             <select name="rating" id="rating">
+                                <option value="" selected disabled hidden>Bitte Schulnote auswählen...</option>
                                 <option value="one">1</option>
                                 <option value="two">2</option>
                                 <option value="three">3</option>

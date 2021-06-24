@@ -8,8 +8,6 @@ public class Rating {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    private String firstname;
-    private String lastname;
     private String vaccenter;
     private String comment;
     private String grade;
@@ -19,12 +17,11 @@ public class Rating {
     public Rating() {
     }
 
-    public Rating(String firstname, String lastname, String vaccenter, String comment, String grade) {
-        this.firstname = firstname;
-        this.lastname = lastname;
+    public Rating(String vaccenter, String comment, String grade) {
         this.vaccenter = vaccenter;
         this.comment = comment;
         this.grade = grade;
+        this.owner = owner;
     }
 
     @Override
@@ -32,11 +29,6 @@ public class Rating {
 
         StringBuilder builder = new StringBuilder();
 
-
-        builder.append(firstname);
-        builder.append("\n");
-        builder.append(lastname);
-        builder.append("\n");
         builder.append(owner);
         builder.append("\n");
         builder.append(vaccenter);
@@ -48,28 +40,20 @@ public class Rating {
         return builder.toString();
     }
 
+    public String getOwner() {
+        return owner;
+    }
+
+    public void setOwner(String owner) {
+        this.owner = owner;
+    }
+
     public Long getId() {
         return id;
     }
 
     public void setId(Long id) {
         this.id = id;
-    }
-
-    public String getFirstname() {
-        return firstname;
-    }
-
-    public void setFirstname(String firstname) {
-        this.firstname = firstname;
-    }
-
-    public String getLastname() {
-        return lastname;
-    }
-
-    public void setLastname(String lastname) {
-        this.lastname = lastname;
     }
 
     public String getVaccenter() {
