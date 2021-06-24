@@ -10,6 +10,7 @@ public class GetVacHtmlController {
 
     @Autowired
     private VacCenterRepository vacCenterRepository;
+    private RatingRepository ratingRepository;
 
 
     @GetMapping(path = Endpoints.LANDING)

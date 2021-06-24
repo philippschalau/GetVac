@@ -10,18 +10,19 @@ public class Rating {
     private Long id;
     private String vaccenter;
     private String comment;
-    private String grade;
+    private int grade;
     private String owner;
 
 
     public Rating() {
     }
 
-    public Rating(String vaccenter, String comment, String grade) {
+    public Rating(String owner, String vaccenter, String comment, int grade) {
+        this.owner = owner;
         this.vaccenter = vaccenter;
         this.comment = comment;
         this.grade = grade;
-        this.owner = owner;
+
     }
 
     @Override
@@ -72,11 +73,11 @@ public class Rating {
         this.comment = comment;
     }
 
-    public String getGrade() {
+    public int getGrade() {
         return grade;
     }
 
-    public void setGrade(String grade) {
+    public void setGrade(int grade) {
         this.grade = grade;
     }
 }

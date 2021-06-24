@@ -6,7 +6,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface RatingRepository extends JpaRepository<VacCenter, Long> {
+public interface RatingRepository extends JpaRepository<Rating, Long> {
 
 
 }
