@@ -2,12 +2,12 @@ const app = {
     data() {
         return {
             show: false,
-            vaccenter:'',
-            comment:'',
-            grade:''
+            vaccenter: '',
+            comment: '',
+            grade: ''
         }
     },
-template:` 
+    template: ` 
 <div class="headbuttons">
     <button @click="show = !show" type="submit" class="btn btn-primary">Bewertung abgeben</button>
 </div>
@@ -58,23 +58,23 @@ template:`
     </div>
 </transition>
 `,
-methods:{
-    save() {
-        axios.post('/rating', {
-            vaccenter: this.vaccenter,
-            comment: this.comment,
-            grade: this.grade
-        })
-            .then((response) => {
-                this.vaccenter = '';
-                this.comment = '';
-                this.grade = '';
-            }, (error) => {
-                console.log('Rating konnte nicht gespeichert werden');
-            });
+    methods: {
+        save() {
+            axios.post('/rating', {
+                vaccenter: this.vaccenter,
+                comment: this.comment,
+                grade: this.grade
+            })
+                .then((response) => {
+                    this.vaccenter = '';
+                    this.comment = '';
+                    this.grade = '';
+                }, (error) => {
+                    console.log('Rating konnte nicht gespeichert werden');
+                });
 
+        }
     }
-}
 
 }
 

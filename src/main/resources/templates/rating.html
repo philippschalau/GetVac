@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="icon" href="/bilder/Logo.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/css/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/css/bootstrap-datetimepicker.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <script src="https://unpkg.com/vue@next"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
@@ -21,15 +22,15 @@
     <font class="headline" face="Verdana" size="5" style="color:#43cea2"><b>bestVac</b></font>
     <a class="rating" href="/" style="color:#43cea2">Bewertungen ansehen</a>
     <div class="loginLogout" sec:authorize="!isAuthenticated()">
-        <a class="btn btn-primary" th:href="@{/oauth2/authorization/okta}" th:classappend="${#request.requestURI == '/login' ? 'active':''}">Login</a>
+        <a class="btn btn-primary" th:href="@{/oauth2/authorization/okta}"
+           th:classappend="${#request.requestURI == '/login' ? 'active':''}">Login</a>
     </div>
     <div class="loginLogout" sec:authorize="isAuthenticated()">
-        <form id="logout-form" method="POST" action="#" th:action="@{/logout}" >
+        <form id="logout-form" method="POST" action="#" th:action="@{/logout}">
             <button type="submit" class="btn btn-primary">Logout</button>
         </form>
     </div>
 </div>
-
 
 
 <div id="ratingpage">
@@ -37,44 +38,43 @@
 </div>
 
 
+<div class="boxes">
+    <p th:text="${listOfCenters[0].getName()}"/>
+    <p th:text="${listOfCenters[0].getStreet()}"/>
+    <p th:text="${listOfCenters[0].getZip() + ' ' + listOfCenters[0].getCity()}"/>
 
-    <div class="boxes">
-        <p th:text="${listOfCenters[0].getName()}"/>
-        <p th:text="${listOfCenters[0].getStreet()}"/>
-        <p th:text="${listOfCenters[0].getZip() + ' ' + listOfCenters[0].getCity()}"/>
+    <p>_______________________</p>
+    <p th:text="${listOfCenters[1].getName()}"/>
+    <p th:text="${listOfCenters[1].getStreet()}"/>
+    <p th:text="${listOfCenters[1].getZip() + ' ' + listOfCenters[1].getCity()}"/>
 
-        <p>_______________________</p>
-        <p th:text="${listOfCenters[1].getName()}"/>
-        <p th:text="${listOfCenters[1].getStreet()}"/>
-        <p th:text="${listOfCenters[1].getZip() + ' ' + listOfCenters[1].getCity()}"/>
+    <p>_______________________</p>
+    <p th:text="${listOfCenters[2].getName()}"/>
+    <p th:text="${listOfCenters[2].getStreet()}"/>
+    <p th:text="${listOfCenters[2].getZip() + ' ' + listOfCenters[2].getCity()}"/>
 
-        <p>_______________________</p>
-        <p th:text="${listOfCenters[2].getName()}"/>
-        <p th:text="${listOfCenters[2].getStreet()}"/>
-        <p th:text="${listOfCenters[2].getZip() + ' ' + listOfCenters[2].getCity()}"/>
+</div>
 
-    </div>
+<div class="boxesright">
+    <p th:text="${listOfCenters[3].getName()}"/>
+    <p th:text="${listOfCenters[3].getStreet()}"/>
+    <p th:text="${listOfCenters[3].getZip() + ' ' + listOfCenters[3].getCity()}"/>
 
-    <div class="boxesright">
-        <p th:text="${listOfCenters[3].getName()}"/>
-        <p th:text="${listOfCenters[3].getStreet()}"/>
-        <p th:text="${listOfCenters[3].getZip() + ' ' + listOfCenters[3].getCity()}"/>
+    <p>_______________________</p>
+    <p th:text="${listOfCenters[4].getName()}"/>
+    <p th:text="${listOfCenters[4].getStreet()}"/>
+    <p th:text="${listOfCenters[4].getZip() + ' ' + listOfCenters[4].getCity()}"/>
 
-        <p>_______________________</p>
-        <p th:text="${listOfCenters[4].getName()}"/>
-        <p th:text="${listOfCenters[4].getStreet()}"/>
-        <p th:text="${listOfCenters[4].getZip() + ' ' + listOfCenters[4].getCity()}"/>
+    <p>_______________________</p>
+    <p th:text="${listOfCenters[5].getName()}"/>
+    <p th:text="${listOfCenters[5].getStreet()}"/>
+    <p th:text="${listOfCenters[5].getZip() + ' ' + listOfCenters[5].getCity()}"/>
 
-        <p>_______________________</p>
-        <p th:text="${listOfCenters[5].getName()}"/>
-        <p th:text="${listOfCenters[5].getStreet()}"/>
-        <p th:text="${listOfCenters[5].getZip() + ' ' + listOfCenters[5].getCity()}"/>
-
-    </div>
-    <div class="map">
-        <iframe src="https://www.google.com/maps/d/embed?mid=1nGlBumZY-CJdHI_HshGBGKkqNLZdvWkp&hl=de" width="1000"
-                height="500" style="border:0;"></iframe>
-    </div>
+</div>
+<div class="map">
+    <iframe src="https://www.google.com/maps/d/embed?mid=1nGlBumZY-CJdHI_HshGBGKkqNLZdvWkp&hl=de" width="1000"
+            height="500" style="border:0;"></iframe>
+</div>
 </div>
 
 </body>
