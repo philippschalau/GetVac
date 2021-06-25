@@ -72,6 +72,7 @@ const app = {
                 }, (error) => {
                     console.log('Rating konnte nicht gespeichert werden');
                 });
+            window.location.href = '/';
 
         }
 
