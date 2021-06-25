@@ -1,7 +1,9 @@
 <!DOCTYPE html>
-<html xmlns:th="https://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml" th:fragment="layout (template)" lang="en">
+
 <head>
-    <meta charset="UTF-8">
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
     <title>bestVac</title>
     <link rel="stylesheet" href="/css/main.css"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,6 +22,8 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
             integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
             crossorigin="anonymous"></script>
+
+
 
 </head>
 <body>
@@ -46,6 +50,7 @@
         <p>Impfzentrum Arena Berlin</p>
         <p>_________________</p>
         <p class="cardcomment">Bewertung: </p>
+        <p th:text="${arenaRating}"/>
     </div>
 </div>
 <div class="card">
@@ -54,6 +59,7 @@
         <p>Impfzentrum Erika-Heß-Eisstadion</p>
         <p>_________________</p>
         <p class="cardcomment">Bewertung: </p>
+        <p th:text="${erikaRating}"/>
     </div>
 </div>
 <div class="card">
@@ -62,14 +68,19 @@
         <p>Impfzentrum Flughafen Tegel</p>
         <p>_________________</p>
         <p class="cardcomment">Bewertung: </p>
+        <p th:text="${tegelRating}"/>
     </div>
 </div>
+
+
+
 <div class="card">
     <img src="/bilder/Tempelhof.jpg" width="260" height="150" alt="Selfhtml">
     <div class="card-body">
         <p>Impfzentrum Flughafen Tempelhof</p>
         <p>_________________</p>
         <p class="cardcomment">Bewertung: </p>
+        <p th:text="${tempelhofRating}"/>
     </div>
 </div>
 <div class="card">
@@ -78,6 +89,7 @@
         <p>Impfzentrum Messe Berlin</p>
         <p>_________________</p>
         <p class="cardcomment">Bewertung: </p>
+        <p th:text="${messeRating}"/>
     </div>
 </div>
 <div class="card">
@@ -86,9 +98,11 @@
         <p>Impfzentrum Velodrom Berlin</p>
         <p>_________________</p>
         <p class="cardcomment">Bewertung: </p>
+        <p th:text="${velodromRating}"/>
     </div>
 </div>
 
-
 </body>
 </html>
+
+

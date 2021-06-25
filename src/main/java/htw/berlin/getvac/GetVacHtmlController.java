@@ -10,21 +10,32 @@ public class GetVacHtmlController {
 
     @Autowired
     private VacCenterRepository vacCenterRepository;
-    private RatingRepository ratingRepository;
 
+    @Autowired
+    private RatingService ratingService;
 
     @GetMapping(path = Endpoints.LANDING)
-    String landing( ) {
+    public String landing(Model model) {
+
+        model.addAttribute("arenaRating", ratingService.arenaAverage());
+        model.addAttribute("erikaRating", ratingService.erikaAverage());
+        model.addAttribute("tegelRating", ratingService.tegelAverage());
+        model.addAttribute("tempelhofRating", ratingService.tempelhofAverage());
+        model.addAttribute("messeRating", ratingService.messeAverage());
+        model.addAttribute("velodromRating", ratingService.velodromAverage());
+
 
         return "landing";
     }
 
     @GetMapping(path = Endpoints.RATING)
-    String landing(Model model) {
+    public String rating(Model model) {
 
         model.addAttribute("listOfCenters", vacCenterRepository.findAll());
 
         return "rating";
     }
+
+
 
 }

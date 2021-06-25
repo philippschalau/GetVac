@@ -17,11 +17,12 @@ public class GetVacRestController {
     private RatingService ratingService;
 
 
-    @PostMapping("/rating")
+    @PostMapping(Endpoints.RATING)
     public Rating createRating(@AuthenticationPrincipal OidcUser user, @RequestBody Rating rating) {
         rating.setOwner(user.getEmail());
         return ratingService.save(rating);
     }
+
 
 
 

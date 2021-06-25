@@ -36,7 +36,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 ).permitAll()
                 .antMatchers(
                         "/css/*",
-                        "/bilder/*"
+                        "/bilder/*",
+                        "/js/"
                 ).permitAll()
                 .anyRequest().authenticated()
 

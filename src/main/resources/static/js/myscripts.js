@@ -4,7 +4,7 @@ const app = {
             show: false,
             vaccenter: '',
             comment: '',
-            grade: ''
+            grade: '',
         }
     },
     template: ` 
@@ -19,7 +19,7 @@ const app = {
                 <div class='my-col-md-6'>
                     <label>Impfzentrum auswählen: </label>
                     <div id="location">
-                        <select v-model="vaccenter" required>
+                        <select v-model="vaccenter">
                             <option value="" disabled selected>Bitte Impfzentrum auswählen...</option>
                             <option value="Impfzentrum Arena">Impfzentrum Arena</option>
                             <option value="Impfzentrum Erika-Heß-Eisstadion">Impfzentrum Erika-Heß-Eisstadion</option>
@@ -74,6 +74,8 @@ const app = {
                 });
 
         }
+
+
     }
 
 }

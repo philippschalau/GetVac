@@ -1,12 +1,13 @@
 package htw.berlin.getvac;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
 @Repository
-public interface VacCenterRepository extends JpaRepository<VacCenter, Long> {
+public interface VacCenterRepository extends CrudRepository<VacCenter, Long> {
 
 
 }
