@@ -24,6 +24,8 @@ public class GetVacHtmlController {
         model.addAttribute("messeRating", ratingService.messeAverage());
         model.addAttribute("velodromRating", ratingService.velodromAverage());
 
+        model.addAttribute("comment", ratingService.showComments());
+
 
         return "landing";
     }

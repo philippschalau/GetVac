@@ -4,6 +4,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Repository
@@ -26,4 +27,8 @@ public interface RatingRepository extends CrudRepository<Rating, Long> {
 
     @Query(value="SELECT ROUND(AVG(grade),1) FROM rating WHERE vaccenter = 'Impfzentrum Velodrom'", nativeQuery = true)
     double velodromRating();
+
+    @Query(value="SELECT comment FROM rating", nativeQuery = true)
+    ArrayList<String> comments();
+
 }

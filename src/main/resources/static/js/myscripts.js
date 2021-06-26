@@ -34,7 +34,7 @@ const app = {
             <div class='my-col-md-6'>
                 <label class="control-label">Kommentar: </label>
                 <div class="form-group">
-                    <textarea  v-model="comment" style="resize: none" rows="4" cols="30"></textarea>
+                    <textarea  v-model="comment" style="resize: none" rows="4" cols="30" maxlength="100"></textarea>
                 </div>
             </div>
             <div class='my-col-md-6'>

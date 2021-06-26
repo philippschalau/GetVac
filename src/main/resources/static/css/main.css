@@ -78,6 +78,7 @@ div.boxesright {
 
 }
 
+
 div.map {
     padding: 10px;
     margin: 20px;
@@ -137,8 +138,23 @@ div.my-container{
     box-shadow: 5px 8px 10px 10px rgba(0,0,0,0.37);
 }
 
+.commentcard{
+    float: left;
+    padding: 20px;
+    margin-top: 100px;
+    margin-left: 13%;
+    height: 200px;
+    width: 300px;
+    background-color: rgba(255, 255, 255, 0.47);
+    border-radius: 25px;
+    box-shadow: 5px 8px 10px 10px rgba(0,0,0,0.37);
+}
 
+.border{
+    color: white;
+    font-size: 20px;
 
+}
 
 .bounce-enter-active {
     animation: bounce-in 0.5s;
