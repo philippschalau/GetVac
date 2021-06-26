@@ -14,11 +14,12 @@ body {
     top: 35%;
     bottom: 0;
 }
-img{
+
+img {
     float: left;
 }
 
-.headline{
+.headline {
     float: left;
     margin-top: 6px;
 }
@@ -27,6 +28,7 @@ font {
     margin-left: 5px;
 
 }
+
 p {
     font-size: 20px;
     margin-top: 10px;
@@ -56,12 +58,13 @@ div.boxes {
     margin: 20px;
     margin-top: 110px;
     color: white;
-    border-radius: 25px;
+    border-radius: 15px;
     display: block;
     float: left;
     border-style: solid;
     border-color: white;
 }
+
 
 div.boxesright {
     width: 20%;
@@ -87,14 +90,14 @@ div.map {
     display: block;
 }
 
-.loginLogout{
+.loginLogout {
     padding: 7px 15px;
     float: right;
     margin-top: 6px;
     margin-right: 40px;
 }
 
-.buchen{
+.buchen {
     padding: 7px 15px;
     border-radius: 25px;
     background-color: #4396ce;
@@ -104,29 +107,29 @@ div.map {
     font-size: x-large;
 }
 
-div.my-container{
-    display:flex;
+div.my-container {
+    display: flex;
     justify-content: center;
     margin-top: 110px;
     height: 400px;
 }
 
-.headbuttons{
+.headbuttons {
     margin-top: 5%;
     position: center;
 }
 
-.einreichen{
+.einreichen {
     margin-top: 10px;
 }
 
-.rating{
+.rating {
     float: left;
     margin-top: 15px;
     margin-left: 30px;
 }
 
-.card{
+.card {
     float: left;
     padding: 20px;
     margin-top: 100px;
@@ -135,33 +138,30 @@ div.my-container{
     width: 300px;
     background-color: white;
     border-radius: 25px;
-    box-shadow: 5px 8px 10px 10px rgba(0,0,0,0.37);
+    box-shadow: 5px 8px 10px 10px rgba(0, 0, 0, 0.37);
 }
 
-.commentcard{
+.commentcard {
     float: left;
     padding: 20px;
-    margin-top: 100px;
     margin-left: 13%;
+    margin-top: 100px;
     height: 200px;
     width: 300px;
     background-color: rgba(255, 255, 255, 0.47);
     border-radius: 25px;
-    box-shadow: 5px 8px 10px 10px rgba(0,0,0,0.37);
+    box-shadow: 5px 8px 10px 10px rgba(0, 0, 0, 0.37);
 }
 
-.border{
-    color: white;
-    font-size: 20px;
-
-}
 
 .bounce-enter-active {
     animation: bounce-in 0.5s;
 }
+
 .bounce-leave-active {
     animation: bounce-in 0.5s reverse;
 }
+
 @keyframes bounce-in {
     0% {
         transform: scale(0);
