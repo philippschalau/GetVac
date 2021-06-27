@@ -1,5 +1,6 @@
 import { mount } from '@vue/test-utils'
 import MyScripts from './myscripts.js';
+global.axios = require('axios');
 
 test('should change the variable show from false to true when button is clicked', async () => {
 
