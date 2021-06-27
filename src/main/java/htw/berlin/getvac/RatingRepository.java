@@ -11,24 +11,24 @@ import java.util.List;
 public interface RatingRepository extends CrudRepository<Rating, Long> {
 
     @Query(value="SELECT ROUND(AVG(grade),1) FROM rating WHERE vaccenter = 'Impfzentrum Arena'", nativeQuery = true)
-    double arenaRating();
+    Double arenaRating();
 
     @Query(value="SELECT ROUND(AVG(grade),1) FROM rating WHERE vaccenter = 'Impfzentrum Erika-Heß-Eisstadion'", nativeQuery = true)
-    double erikaRating();
+    Double erikaRating();
 
     @Query(value="SELECT ROUND(AVG(grade),1) FROM rating WHERE vaccenter = 'Impfzentrum Flughafen Tegel'", nativeQuery = true)
-    double tegelRating();
+    Double tegelRating();
 
     @Query(value="SELECT ROUND(AVG(grade),1) FROM rating WHERE vaccenter = 'Impfzentrum Flughafen Tempelhof'", nativeQuery = true)
-    double tempelhofRating();
+    Double tempelhofRating();
 
     @Query(value="SELECT ROUND(AVG(grade),1) FROM rating WHERE vaccenter = 'Impfzentrum Messe'", nativeQuery = true)
-    double messeRating();
+    Double messeRating();
 
     @Query(value="SELECT ROUND(AVG(grade),1) FROM rating WHERE vaccenter = 'Impfzentrum Velodrom'", nativeQuery = true)
-    double velodromRating();
+    Double velodromRating();
 
     @Query(value="SELECT comment FROM rating", nativeQuery = true)
-    ArrayList<String> comments();
+    List<String> comments();
 
 }

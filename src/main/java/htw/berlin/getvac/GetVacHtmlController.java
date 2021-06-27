@@ -11,6 +11,7 @@ public class GetVacHtmlController {
     @Autowired
     private VacCenterRepository vacCenterRepository;
 
+
     @Autowired
     private RatingService ratingService;
 

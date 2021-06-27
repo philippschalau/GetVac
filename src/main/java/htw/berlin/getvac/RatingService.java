@@ -22,46 +22,46 @@ public class RatingService {
     }
 
 
-    public double arenaAverage(){
-        double average = ratingRepository.arenaRating();
+    public Double arenaAverage(){
+        Double average = ratingRepository.arenaRating();
 
         return average;
     }
-    public double erikaAverage(){
-        double average = ratingRepository.erikaRating();
+    public Double erikaAverage(){
+        Double average = ratingRepository.erikaRating();
 
         return average;
     }
-    public double tegelAverage(){
-        double average = ratingRepository.tegelRating();
+    public Double tegelAverage(){
+        Double average = ratingRepository.tegelRating();
 
         return average;
     }
-    public double tempelhofAverage(){
-        double average = ratingRepository.tempelhofRating();
+    public Double tempelhofAverage(){
+        Double average = ratingRepository.tempelhofRating();
 
         return average;
     }
-    public double messeAverage(){
-        double average = ratingRepository.messeRating();
+    public Double messeAverage(){
+        Double average = ratingRepository.messeRating();
 
         return average;
     }
-    public double velodromAverage(){
-        double average = ratingRepository.velodromRating();
+    public Double velodromAverage(){
+        Double average = ratingRepository.velodromRating();
 
         return average;
     }
 
-    public ArrayList<String> showComments(){
+    public List<String> showComments(){
         String comment;
-        ArrayList<String> comments = new ArrayList<>();
-        int upperbound = ratingRepository.comments().size() - 1;
+        List<String> comments = new ArrayList<>();
+        List<String> listOfComments = ratingRepository.comments();
+        int upperbound = listOfComments.size() - 1;
         Random random = new Random();
 
         while(comments.size() < 3){
-            comment = ratingRepository.comments().get(random.nextInt(upperbound));
-
+            comment = listOfComments.get(random.nextInt(upperbound));
             if(!comments.contains(comment) && comment != null){
                 comments.add(comment);
             }

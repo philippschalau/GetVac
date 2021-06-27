@@ -36,17 +36,17 @@
     </div>
 </div>
 
-
-<div class="commentcard">
-    <p th:text="${comment.get(0)}"/>
+<div th:unless="${#lists.isEmpty(comment)}">
+    <div class="commentcard">
+        <p th:text="${comment.get(0)}"/>
+    </div>
+    <div class="commentcard">
+        <p th:text="${comment.get(1)}"/>
+    </div>
+    <div class="commentcard">
+        <p th:text="${comment.get(2)}"/>
+    </div>
 </div>
-<div class="commentcard">
-    <p th:text="${comment.get(1)}"/>
-</div>
-<div class="commentcard">
-    <p th:text="${comment.get(2)}"/>
-</div>
-
 
 <div class="card">
     <img src="/bilder/Arena.jpg" width="260" height="150" alt="Selfhtml">
