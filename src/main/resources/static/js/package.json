@@ -14,12 +14,14 @@
     "@babel/core": "^7.14.3",
     "@babel/plugin-transform-modules-commonjs": "^7.14.0",
     "@babel/preset-env": "^7.14.2",
-    "@vue/test-utils": "^2.0.0-rc.6",
+    "@vue/test-utils": "^2.0.0-rc.9",
+    "babel-jest": "^27.0.5",
     "eslint": "^7.27.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.23.3",
     "eslint-plugin-jest": "^24.3.6",
     "eslint-plugin-vue": "^7.9.0",
+    "jest": "^27.0.5",
     "vue-jest": "^5.0.0-alpha.10"
   },
   "scripts": {
@@ -27,7 +29,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ProfWider/boot-test.git"
+    "url": "git+https://github.com/philippschalau/getvac.git"
   },
   "dependencies": {
     "axios": "^0.21.1",
